@@ -12,5 +12,6 @@ deploy:
         api_key: 03234a5c80f700629c77eb18d3a611f4b909076a
         skip_cleanup: true
         on:
+          repo: adn53/1122
           tags: true
-          
+          all_branches: true
