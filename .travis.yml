@@ -10,7 +10,6 @@ before_deploy:
 deploy:
  provider: pages
  api_key: 5bf58df9a9a6bad438977b951aee21d3f21c44a7
-
  on: 
    branch: master
  skip_cleanup: true
