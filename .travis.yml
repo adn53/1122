@@ -11,5 +11,5 @@ deploy:
  provider: pages
  api_key: "dcef28793851140401cc50b4d81583e56fb0750f"
  on: 
-   branch: gh-pages
+   branch: master
  skip_cleanup: true
