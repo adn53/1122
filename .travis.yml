@@ -1,17 +1,14 @@
 language: node_js
 node_js:
  - "node"
-after_success:
-  - git config --global user.email "adn53@drexel.edu"
-  - git config --global user.name "adn53"
-  - export GIT_TAG=build-$TRAVIS_BRANCH-$(date -u "+%Y-%m-%d-%H-%M-%S")-$TRAVIS_BUILD_NUMBER
-  - git tag $GIT_TAG -a -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
-  - git push origin $GIT_TAG
+before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "YOUR GIT USER NAME"
+      - git config --local user.email "YOUR GIT USER EMAIL"
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
 deploy:
-        provider: releases
-        api_key: 03234a5c80f700629c77eb18d3a611f4b909076a
-        skip_cleanup: true
-        on:
-          repo: adn53/1122
-          tags: true
-          all_branches: true
+ provider: releases
+ api_key: "GITHUB OAUTH TOKEN"
+ file: "FILE TO UPLOAD"
+ skip_cleanup: true
