@@ -10,7 +10,7 @@ before_deploy:
 deploy:
  provider: pages
  github_token: 85fbe84ea2769b9311a54b7aab61a63b008810cd
- api_key: dcef28793851140401cc50b4d81583e56fb0750f
+
  on: 
    branch: master
  skip_cleanup: true
