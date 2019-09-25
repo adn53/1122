@@ -9,7 +9,7 @@ before_deploy:
       - git tag $TRAVIS_TAG
 deploy:
  provider: pages
- github_token: "85fbe84ea2769b9311a54b7aab61a63b008810cd"
+ github_token: "5bf58df9a9a6bad438977b951aee21d3f21c44a7"
 
  on: 
    branch: master
